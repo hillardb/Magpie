@@ -87,7 +87,7 @@ public class Magpie
 		else if(findKeyword(statement, "i") >= 0 && (findKeyword(statement, "you", findKeyword(statement, "I", 0)) >= 0))
 		{
 			int startingPosition = statement.indexOf("i") + 1;
-			String objectOfDesire = statement.substring(startingPosition, 7);
+			String objectOfDesire = statement.substring(startingPosition, findKeyword(statement, "you"));
 			response = ("Why do you" + objectOfDesire + "me?");
 		}
 
